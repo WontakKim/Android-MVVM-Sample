@@ -21,6 +21,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
@@ -39,6 +44,12 @@ dependencies {
     implementation "com.google.dagger:dagger-android-support:$dagger_version"
     kapt "com.google.dagger:dagger-android-processor:$dagger_version"
     kapt "com.google.dagger:dagger-compiler:$dagger_version"
+
+    // Architecture
+    implementation "android.arch.lifecycle:runtime:$life_cycle_version"
+    implementation "android.arch.lifecycle:extensions:$life_cycle_version"
+    kapt "android.arch.lifecycle:compiler:$life_cycle_version"
+    implementation "android.arch.lifecycle:common-java8:$life_cycle_version"
 
     // UI
     implementation "com.jakewharton:butterknife:$butter_knife_version"
