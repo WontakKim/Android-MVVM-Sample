@@ -8,9 +8,10 @@ import javax.inject.Singleton
 
 @Singleton
 @Component(modules = arrayOf(
-    AndroidSupportInjectionModule::class,
-    ApplicationModule::class,
-    ActivityBuilder::class
+        AndroidSupportInjectionModule::class,
+        ApplicationModule::class,
+        ActivityProvider::class,
+        ViewModelModule::class
 ))
 interface ApplicationComponent: AndroidInjector<DaggerApplication> {
 

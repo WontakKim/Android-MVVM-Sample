@@ -9,9 +9,6 @@ import javax.inject.Inject
 
 class MainActivity : BaseActivity() {
 
-    @BindView(R.id.label_name)
-    lateinit var textLabel: TextView
-
     @Inject
     lateinit var name: String
 
@@ -21,6 +18,8 @@ class MainActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        textLabel.setText(name)
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.container_main, MainFragment())
+            .commit()
     }
 }
