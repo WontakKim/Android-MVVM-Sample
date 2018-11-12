@@ -4,7 +4,7 @@ import dagger.Module
 import dagger.Provides
 
 @Module
-class ApplicationModule {
+class AppModule {
 
     @Provides
     fun provideName(): String {

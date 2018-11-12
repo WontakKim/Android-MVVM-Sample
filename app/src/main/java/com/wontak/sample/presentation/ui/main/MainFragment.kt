@@ -6,6 +6,7 @@ import android.view.View
 import com.wontak.sample.R
 import com.wontak.sample.presentation.base.BaseFragment
 import com.wontak.sample.presentation.di.ViewModelFactory
+import kotlinx.android.synthetic.main.fragment_main.*
 import javax.inject.Inject
 
 class MainFragment : BaseFragment() {

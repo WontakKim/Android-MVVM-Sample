@@ -7,13 +7,13 @@ import dagger.android.support.DaggerApplication
 import javax.inject.Singleton
 
 @Singleton
-@Component(modules = arrayOf(
-        AndroidSupportInjectionModule::class,
-        ApplicationModule::class,
-        ActivityProvider::class,
-        ViewModelModule::class
-))
-interface ApplicationComponent: AndroidInjector<DaggerApplication> {
+@Component(modules = [
+    AndroidSupportInjectionModule::class,
+    AppModule::class,
+    ActivityBindingModule::class,
+    ViewModelModule::class
+])
+interface AppComponent: AndroidInjector<DaggerApplication> {
 
     @Component.Builder
     abstract class Builder: AndroidInjector.Builder<DaggerApplication>()
