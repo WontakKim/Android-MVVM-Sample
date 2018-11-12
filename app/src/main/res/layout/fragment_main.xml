@@ -5,7 +5,7 @@
 
     <data>
         <variable
-                name="model"
+                name="data"
                 type="com.wontak.sample.presentation.ui.main.MainViewModel" />
 
     </data>
@@ -20,6 +20,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="100dp"
+            android:text="@{String.valueOf(data.counter)}"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -30,7 +31,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="100dp"
-            android:text="increase"
+            android:text="increse"
+            android:onClick="@{() -> data.onButtonClick()}"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
